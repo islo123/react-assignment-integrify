@@ -1,38 +1,98 @@
-.App {
+body {
   text-align: center;
+  background-color: #cec129;
+  position: relative;
+}
+.uncheck-btn {
+  cursor: pointer;
+  align-self: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.check-btn {
+  cursor: pointer;
+  align-self: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.single-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  margin: 5px;
+  background-color: blue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.item-name {
+  width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-input {
+  padding: 7px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+}
+
+.add-btn {
+  padding: 7px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.delete-all-btn {
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: #cec129;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 100px;
+  border: blue solid 2px;
+}
+
+.add-modal {
+  color: blue;
+}
+
+.delete-modal {
+  color: red;
+}
+
+.delete-all-modal {
+  background-color: #cec129;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%,-50%);
+  padding: 1rem;
+  border: blue solid 2px;
+}
+
+.cancel-btn {
+  font-weight: bolder;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
 }
