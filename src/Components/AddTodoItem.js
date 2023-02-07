@@ -25,7 +25,7 @@ export default function AddTodoItem() {
     <div>
         <form>
             <input className='add-input' required type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-            <button className='add-btn' onClick={addItem} >Lisää tehtävä</button>
+            <button type='submit' className='add-btn' onClick={addItem} >Lisää tehtävä</button>
         </form>
     </div>
   )

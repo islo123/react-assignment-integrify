@@ -11,6 +11,7 @@ export default function DeleteList() {
         const res = await api.delete('/list/')
         dispatch({type: DELETE_LIST, paylaod: res.data})
         setIsModalOpen(false)
+        window.location.reload()
     }
 
     const openModal = () => {
