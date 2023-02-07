@@ -8,16 +8,11 @@ import { ImCheckboxUnchecked } from "react-icons/im";
 export default function TodoList() {
 
     const { todo, dispatch } = useTodoContext()
-    
-    useEffect(() => {
-        const getTodoList = async () => {
-            const res = await api.get("/list/")
-            dispatch({type: GET_TODO_LIST, payload: res.data.todolists})
-        }        
-        getTodoList()
-    }, [todo, dispatch])
 
-
+    const getTodoList = async () => {
+        const res = await api.get("/list/")
+        dispatch({type: GET_TODO_LIST, payload: res.data.todolists})
+    }
 
     const deleteTodoItem = async (_id) => {
         dispatch({type: IS_DELETE_ITEM_MODAL_OPEN, payload: true})
@@ -31,10 +26,12 @@ export default function TodoList() {
     const onClickCheckbox = async (_id, isChecked) => {
         const res = await api.patch(`/list/${_id}`, { isChecked: !isChecked })
         dispatch({type: IS_ITEM_CHECKED, payload: {data: res.data, id: _id}})
+        window.location.reload()
     }
 
   return (
     <div>
+        <button className='all-list-btn' onClick={getTodoList}>All list</button>
         {
                 todo && todo.map(({ _id, name, isChecked }) => {
                 return (

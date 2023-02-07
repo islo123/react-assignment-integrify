@@ -96,3 +96,34 @@ body {
   color: white;
   background-color: blue;
 }
+
+.uncheck-list-btn {
+  font-weight: bolder;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}
+
+.check-list-btn {
+  font-weight: bolder;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}
+
+.all-list-btn {
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px;
+  cursor: pointer;
+  color: blue;
+  background-color: white;
+}

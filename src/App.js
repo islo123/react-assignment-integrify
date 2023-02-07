@@ -1,5 +1,6 @@
 import './App.css';
 import AddTodoItem from './Components/AddTodoItem';
+import CheckboxItem from './Components/CheckboxItem';
 import DeleteList from './Components/DeleteList';
 import Modal from './Components/Modal';
 import TodoList from './Components/TodoList';
@@ -12,6 +13,7 @@ function App() {
         <AddTodoItem/>
         <Modal/>
         <TodoList/>
+        <CheckboxItem/>
         <DeleteList/>
       </TodoProvider>
     </div>

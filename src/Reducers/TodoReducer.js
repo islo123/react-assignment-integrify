@@ -6,6 +6,7 @@ export const CHECK_ITEM = "CHECK_ITEM"
 export const IS_ITEM_CHECKED = "IS_ITEM_CHECKED"
 export const IS_ADD_ITEM_MODAL_OPEN = "IS_ADD_ITEM_MODAL_OPEN"
 export const IS_DELETE_ITEM_MODAL_OPEN = "IS_DELETE_ITEM_MODAL_OPEN"
+export const IS_CHECKED_VALUE = "IS_CHECKED_VALUE"
 
 export const todoReducer = (state, action) => {
     switch(action.type) {
@@ -51,6 +52,11 @@ export const todoReducer = (state, action) => {
             return {
                 ...state,
                 isDeleteItemModalOpen: action.payload
+            }
+        case IS_CHECKED_VALUE:
+            return {
+                ...state,
+                todo: action.payload
             }
         default:
             return state
