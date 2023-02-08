@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { api } from '../Api/Axios'
 import { useTodoContext } from '../Context/UseTodoContext'
 import { DELETE_TODO_ITEM, GET_TODO_LIST, IS_DELETE_ITEM_MODAL_OPEN, IS_ITEM_CHECKED } from '../Reducers/TodoReducer'
@@ -31,7 +31,7 @@ export default function TodoList() {
 
   return (
     <div>
-        <button className='all-list-btn' onClick={getTodoList}>All list</button>
+        <button className='all-list-btn' onClick={getTodoList}>Koko lista</button>
         {
                 todo && todo.map(({ _id, name, isChecked }) => {
                 return (
