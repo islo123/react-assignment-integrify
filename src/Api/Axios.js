@@ -1,4 +1,4 @@
 import axios from "axios";
   export const api = axios.create({
-    baseURL: "https://todo-app-1234/todo"
+    baseURL: "https://todo2-app-backend.onrender.com/todo/"
   })
