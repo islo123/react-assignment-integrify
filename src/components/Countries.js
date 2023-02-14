@@ -6,7 +6,7 @@ import { FcNext, FcPrevious} from "react-icons/fc";
 export default function Countries() {
 
   const { countryData } = UseFetch();
-  const [ nextPage, setNextPage] = useState(5);
+  const [ pageNumber, setPageNumber] = useState(5);
 
   const navigate = useNavigate();
 
@@ -17,20 +17,20 @@ export default function Countries() {
 
   const prev = () => {
 
-    if (nextPage === 5) {
-      setNextPage(5)
+    if (pageNumber === 5) {
+      setPageNumber(5)
     } else {
-      setNextPage(nextPage - 5)
+      setPageNumber(pageNumber - 5)
     }
 
   }
 
   const next = () => {
 
-    if (nextPage === countryData.length) {
-      setNextPage(countryData.length)
+    if (pageNumber === countryData.length) {
+      setPageNumber(countryData.length)
     } else {
-      setNextPage(nextPage + 5)
+      setPageNumber(pageNumber + 5)
     }
 
   }
@@ -46,7 +46,7 @@ export default function Countries() {
         {
             countryData.map((country, index) => {
                 return (
-                index < nextPage && index >= nextPage - 5 && <div onClick={() => handleDetail(country.name.common)} className='table-hover'  key={country.name.common}>
+                index < pageNumber && index >= pageNumber - 5 && <div onClick={() => handleDetail(country.name.common)} className='table-hover'  key={country.name.common}>
                     <div className='table table-nth'>
                       <img alt={country.name.common + "flag"} src={country.flags.png}/>
                       <h3 className='country-item'>{country.name.common}</h3>
