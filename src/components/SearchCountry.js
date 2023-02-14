@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import UseFetch from '../UseFetchCountry';
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export default function SearchCountry() {
         })
     }, [query, countryData])
 
-    const navigate = useNavigate(); //uudemassa react router versiossa useHistory() on korvatu useNavigate()
+    const navigate = useNavigate(); 
     
     const navigateToDetailCard = (id) => {
         navigate(`/country-detail/${id}`) 

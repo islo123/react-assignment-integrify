@@ -6,7 +6,7 @@ export default function CountryDetail() {
 
     const {countryData} = UseFetch();
     const { id } = useParams();
-    const navigate = useNavigate(); //uudemassa react router versiossa useHistory() on korvatu useNavigate()
+    const navigate = useNavigate();
     
     const goBackToCards = () => {
         navigate("/") 
