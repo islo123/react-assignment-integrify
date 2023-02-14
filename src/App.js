@@ -1,21 +1,23 @@
 import './App.css';
-import AddTodoItem from './Components/AddTodoItem';
-import CheckboxItem from './Components/CheckboxItem';
-import DeleteList from './Components/DeleteList';
-import Modal from './Components/Modal';
-import TodoList from './Components/TodoList';
-import { TodoProvider } from './Providers/TodoProvider';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import SearchCountry from './components/SearchCountry';
+import CountryDetail from './components/CountryDetail';
+import Countries from './components/Countries';
+
 
 function App() {
   return (
     <div className="App">
-      <TodoProvider>
-        <AddTodoItem/>
-        <Modal/>
-        <TodoList/>
-        <CheckboxItem/>
-        <DeleteList/>
-      </TodoProvider>
+      <Router>
+          <Routes>
+            <Route exact path="/" element={<><SearchCountry/><Countries/></>}/>
+            <Route path="/country-detail/:id" element={<CountryDetail/>}/>
+          </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,129 +1,88 @@
-body {
-  text-align: center;
-  background-color: #cec129;
-  position: relative;
-}
-.uncheck-btn {
-  cursor: pointer;
-  align-self: center;
+.table {
+    display: flex;
+    justify-content: space-evenly ;
 }
 
-.check-btn {
-  cursor: pointer;
-  align-self: center;
+img {
+    width: 200px;
 }
 
-.single-item {
-  display: flex;
-  justify-content: space-around;
-  margin: 5px;
-  background-color: blue;
-  color: white;
+.country-item {
+    width: 200px;
+    align-self: center;
 }
 
-.item-name {
-  width: 200px;
+.item {
+    width: 200px;
+    align-self: center;
 }
 
-.add-input {
-  padding: 7px;
-  margin-right: 10px;
-  border-radius: 5px;
-  background-color: blue;
-  color: white;
+.table-hover {
+    cursor: pointer;
 }
 
-.add-btn {
-  padding: 7px;
-  border-radius: 5px;
-  background-color: blue;
-  color: white;
-  cursor: pointer;
+.table-nth:nth-child(even){
+    background-color: #f2f2f2;
 }
 
-.delete-btn {
-  background-color: red;
-  color: white;
-  font-weight: bolder;
-  cursor: pointer;
+.table-hover:hover {
+    background-color: #90A4B0;
 }
 
-.delete-all-btn {
-  background-color: red;
-  color: white;
-  font-weight: bolder;
-  padding: 3px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
+.container-list {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    min-width: 1000px;
 }
 
-.modal {
-  background-color: #cec129;
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%,-50%);
-  width: 300px;
-  height: 100px;
-  border: blue solid 2px;
+.next-btn {
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: white;
+    margin: 10px;
 }
 
-.add-modal {
-  color: blue;
+.prev-btn {
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: white;
+    margin: 10px;
 }
 
-.delete-modal {
-  color: red;
+input {
+    padding: 10px;
+    margin: 10px;
 }
 
-.delete-all-modal {
-  background-color: #cec129;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%,-50%);
-  padding: 1rem;
-  border: blue solid 2px;
+.search-country-result {
+    min-width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    margin: 10px;
+    padding: 10px;
 }
 
-.cancel-btn {
-  font-weight: bolder;
-  padding: 3px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  color: white;
-  background-color: blue;
+.search-country {
+    cursor: pointer;
 }
 
-.uncheck-list-btn {
-  font-weight: bolder;
-  padding: 3px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  color: white;
-  background-color: blue;
+.first-letter {
+    background-color: blue;
+    width: 50px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border-radius: 50px;
 }
 
-.check-list-btn {
-  font-weight: bolder;
-  padding: 3px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  color: white;
-  background-color: blue;
+.detail-name-container {
+    display: flex;
 }
 
-.all-list-btn {
-  font-weight: bolder;
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
-  margin: 5px;
-  cursor: pointer;
-  color: blue;
-  background-color: white;
+.detail-btn {
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: white;
+    margin: 10px;
 }
