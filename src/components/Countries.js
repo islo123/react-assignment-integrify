@@ -6,8 +6,8 @@ import { FcNext, FcPrevious} from "react-icons/fc";
 export default function Countries() {
 
   const { countryData } = UseFetch();
-  const [ pageNumber, setPageNumber] = useState(5);
-
+  const [ pageNumber, setPageNumber ] = useState(5);
+  const [ page, setPage ] = useState(1)
   const navigate = useNavigate();
 
 
@@ -21,8 +21,8 @@ export default function Countries() {
       setPageNumber(5)
     } else {
       setPageNumber(pageNumber - 5)
-    }
-
+      setPage(page - 1)
+    }  
   }
 
   const next = () => {
@@ -31,8 +31,8 @@ export default function Countries() {
       setPageNumber(countryData.length)
     } else {
       setPageNumber(pageNumber + 5)
+      setPage(page + 1)
     }
-
   }
 
   return (
@@ -46,8 +46,8 @@ export default function Countries() {
         {
             countryData.map((country, index) => {
                 return (
-                index < pageNumber && index >= pageNumber - 5 && <div onClick={() => handleDetail(country.name.common)} className='table-hover'  key={country.name.common}>
-                    <div className='table table-nth'>
+                index < pageNumber && index >= pageNumber - 5 && <div onClick={() => handleDetail(country.name.common)} className='table-nth'  key={country.name.common}>
+                    <div className='table table-hover'>
                       <img alt={country.name.common + "flag"} src={country.flags.png}/>
                       <h3 className='country-item'>{country.name.common}</h3>
                       <h3 className='country-item'>{country.region}</h3>
@@ -59,6 +59,7 @@ export default function Countries() {
         }
         <div style={{textAlign: "center"}}>
           <button className='prev-btn' onClick={prev}><FcPrevious/></button>
+          {page}
           <button className='next-btn' onClick={next}><FcNext/></button>          
         </div>
 
