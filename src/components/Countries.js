@@ -59,7 +59,7 @@ export default function Countries() {
         }
         <div style={{textAlign: "center"}}>
           <button className='prev-btn' onClick={prev}><FcPrevious/></button>
-          {page}/{countryData.length / 5}
+          {page}/{Math.ceil(countryData.length / 5) }
           <button className='next-btn' onClick={next}><FcNext/></button>          
         </div>
 
